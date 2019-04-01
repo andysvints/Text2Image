@@ -143,7 +143,7 @@ function New-Image
                   }
                   
                   $ImageFileName="$OutputPath"+"$NewImageName.$($ImageFormat.ToLower())"
-                  #$BitmapObj.Save("C:\\Users\\andryi.svintsitsky\\Desktop\\$NewImageName.$($ImageFormat.ToLower())", $ImageFormat);
+                  
                   $BitmapObj.Save("$ImageFileName", $ImageFormat);
 
 
