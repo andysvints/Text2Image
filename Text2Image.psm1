@@ -144,7 +144,7 @@ function New-Image
                   
                   $ImageFileName="$OutputPath"+"$NewImageName.$($ImageFormat.ToLower())"
                   
-                  $BitmapObj.Save("$ImageFileName", $ImageFormat);
+                  $BitmapObj.Save("$ImageFileName", $Format);
 
 
               }
