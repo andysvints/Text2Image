@@ -17,5 +17,6 @@ This module has no dependencies.
 ## EXAMPLE
 ```powershell
 PS C:\> t2i -ImageText "`r`nTesting Text2Image Powershell Module`r`n" -ImageStyle PuTTY -Verbose
-		VERBOSE: Performing the operation "New-Image" on target "'Testing Text2Image Powershell Module'. Using PuTTY style". 
+VERBOSE: Performing the operation "New-Image" on target "'Testing Text2Image Powershell Module'. Using PuTTY style". 
 ```
+![Example](https://github.com/andysvints/Text2Image/blob/master/NewImage.png)
