@@ -39,6 +39,13 @@ function New-Image
         [Alias("Style")]
         $ImageStyle="PowerShell",
 
+        
+        # Image Font Size Override
+        [Parameter(ValueFromPipeline=$true,
+                   ValueFromPipelineByPropertyName=$true, 
+                   ValueFromRemainingArguments=$false)]
+        [ValidateRange(1, 72)]
+        [int]$FontSizeOverride,
      
         
         # New Image Format
@@ -114,6 +121,11 @@ function New-Image
                       }
                       Default {}
                   }
+
+                  if ($FontSizeOverride) {
+                    $ImageStyleObjProps.FontSize = $FontSizeOverride
+                  }
+
                   $ImageStyleObj=New-Object -TypeName psobject -Property $ImageStyleObjProps
                   $Format=[System.Drawing.Imaging.ImageFormat]::$ImageFormat
                   $FontObj=New-Object System.Drawing.Font $ImageStyleObj.FontName,$ImageStyleObj.FontSize
